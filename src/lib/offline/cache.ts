@@ -71,7 +71,7 @@ export async function getCachedPapers(
   if (Date.now() - row.savedAt > PAPERS_TTL_MS) return null;
   return {
     ...row.data,
-    status: `${row.data.status || "ok"} · offline-cache`,
+    status: row.data.status === "live" ? "cached" : row.data.status,
   };
 }
 

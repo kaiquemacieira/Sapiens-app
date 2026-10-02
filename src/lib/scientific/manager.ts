@@ -62,7 +62,7 @@ function applyFilters(
     );
   }
   if (opts.source && opts.source !== "all") {
-    const src = opts.source as PaperSourceFilter;
+    const src = opts.source as Exclude<PaperSourceFilter, "all">;
     filtered = filtered.filter((r) => r.sources.includes(src));
   }
 

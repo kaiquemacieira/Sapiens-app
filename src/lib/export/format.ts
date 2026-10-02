@@ -45,8 +45,8 @@ export function papersToCsv(records: ScientificRecord[]): string {
       r.citationCount ?? "",
       r.openAccess ? "yes" : "no",
       r.sources.join("|"),
-      r.sourceUrl ??
-        (r.doi ? `https://doi.org/${r.doi}` : "") ??
+      r.sourceUrl ||
+        (r.doi ? `https://doi.org/${r.doi}` : "") ||
         (r.arxivId ? `https://arxiv.org/abs/${r.arxivId}` : ""),
     ]
       .map((c) => csvEscape(String(c)))

@@ -22,9 +22,9 @@ export type AchievementId =
   | "streak_7"
   | "polymath"
   | "archivist"
-  | "exporter_hopper"
-  | "exporter_scholar"
-  | "exporter_native";
+  | "galaxy_hopper"
+  | "galaxy_scholar"
+  | "galaxy_native";
 
 export type AchievementCategory =
   | "start"

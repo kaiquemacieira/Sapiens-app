@@ -94,7 +94,8 @@ export function sampleHorizonRaDec(
   for (let i = 0; i <= samples; i++) {
     const az = (i / samples) * 360;
     const sph = new Astronomy.Spherical(0, az, 1);
-    const horVec = Astronomy.VectorFromHorizon(sph, time, null);
+    // null = sem correção de refração (aceito em runtime; os tipos da lib só declaram string)
+    const horVec = Astronomy.VectorFromHorizon(sph, time, null as unknown as string);
     const eqj = Astronomy.RotateVector(rot, horVec);
     const equ = Astronomy.EquatorFromVector(eqj);
     points.push({
