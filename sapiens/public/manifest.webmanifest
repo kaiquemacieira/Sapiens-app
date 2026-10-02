@@ -1,0 +1,17 @@
+{
+  "name": "SAPIENS",
+  "short_name": "SAPIENS",
+  "description": "Explore the Universe. Discover what humanity already knows about it.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000008",
+  "theme_color": "#000008",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
